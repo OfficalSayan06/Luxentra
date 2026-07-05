@@ -1,0 +1,1567 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gilda+Display&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rajdhani:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+    outline: none;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+/* font-family: "Gilda Display", serif; */
+/* font-family: "Barlow", sans-serif; */
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #141212;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
+
+::selection {
+
+    background: #AA8453;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar-track {
+    background-color: #141212;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #141212;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #AA8453;
+}
+
+/* SCROLLBAR END */
+
+/* CURSOR */
+#cursor {
+    position: fixed;
+    top: -5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: #AA8453;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+#cursor-border {
+    --size: 50px;
+    position: fixed;
+    top: calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #AA8453;
+    pointer-events: none;
+    transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+        height 0.15s ease-out, background-color 0.15s ease-out;
+    z-index: 999;
+}
+
+/* CURSOR END*/
+
+/* SCROLL TOP */
+.scroll-top-btn {
+    font-family: "Barlow", sans-serif;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1E1E1E;
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.scroll-top-btn:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: #AA8453;
+    align-items: center;
+}
+
+.scroll-top-btn:hover .svgIcon {
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+}
+
+.scroll-top-btn::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: white;
+    font-size: 0px;
+}
+
+.scroll-top-btn:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    transition-duration: 0.3s;
+}
+
+/* SCROLL TOP END */
+
+/* HEADER SECTION */
+.logo {
+    max-width: 250px;
+}
+
+.header .navbar {
+    font-family: "Barlow", sans-serif;
+    padding: 20px 0;
+}
+
+.header .navbar-toggler {
+    border: 0;
+}
+
+.header .navbar-toggler i {
+    color: #fff;
+}
+
+.header .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.header .nav-item {
+    margin: 0 10px;
+}
+
+.header .nav-item .nav-link {
+    color: #fff;
+}
+
+.header .nav-item .nav-link:hover,
+.header .nav-item .nav-link.active {
+    color: #AA8453;
+}
+
+.fancy {
+    font-family: "Barlow", sans-serif;
+    background-color: transparent;
+    border: 2px solid #AA8453;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #AA8453;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 1.25em 2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+}
+
+.fancy::before {
+    content: " ";
+    width: 1.5625rem;
+    height: 2px;
+    background: #AA8453;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #AA8453;
+}
+
+.fancy .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #141212;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #141212;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #141212;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+    color: white;
+    background: #AA8453;
+}
+
+.fancy:hover::before {
+    width: 0.9375rem;
+    background: #141212;
+}
+
+.fancy:hover .text {
+    color: white;
+    padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+}
+
+/* HEADER SECTION END */
+
+/* BANNER SECTION */
+.banner {
+    width: 100%;
+    min-height: 700px;
+    background: url(../images/banner-img.jpg) no-repeat center center;
+    display: flex;
+    align-items: center;
+}
+
+.banner h1 {
+    font-family: "Gilda Display", serif;
+    font-size: 80px;
+    max-width: 870px;
+    text-align: center;
+    margin: 0 auto;
+    animation: animate_opacity 0.8s 0.6s linear forwards;
+    opacity: 0;
+}
+
+@keyframes animate_opacity {
+    100% {
+        opacity: 1;
+    }
+}
+
+.booking-box {
+    font-family: "Barlow", sans-serif;
+    width: 100%;
+    background: #1E1E1E;
+    margin-top: -100px;
+    padding: 50px 100px;
+}
+
+.booking-icon i {
+    color: #AA8453;
+    margin-right: 20px;
+    font-size: 24px;
+}
+
+.check-box-btn {
+    width: 100%;
+    display: inline-block;
+    background: #AA8453;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.booking-box input,
+label {
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.booking-box select {
+    background: none;
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 5px;
+    line-height: 40px;
+    text-align: center;
+    border: none;
+}
+
+.booking-box select option {
+    background-color: #1E1E1E;
+    width: 100%;
+    padding: 0 10px;
+    font-size: 20px;
+    line-height: 40px;
+    box-shadow: none;
+    text-align: center;
+    border: none;
+}
+
+.booking-box input {
+    color-scheme: #AA8453 !important;
+}
+
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    width: 30px;
+    height: 30px;
+    filter: invert(53%) sepia(31%) saturate(591%) hue-rotate(349deg) brightness(93%) contrast(87%);
+}
+
+
+/* BANNER SECTION END */
+
+/* WHAT WE DO SECTION */
+.what-we-do {
+    margin: 6.25rem 0;
+}
+
+.text-box {
+    text-align: center;
+    color: #fff;
+}
+
+.subheading {
+    font-family: "Barlow", sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    position: relative;
+    display: inline-block;
+}
+
+.subheading::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -50px;
+    width: 37px;
+    height: 10px;
+    background-image: url(../images/icon-1.png);
+}
+
+.subheading::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 100%;
+    margin-left: 5px;
+    width: 37px;
+    height: 10px;
+    background-image: url(../images/icon-1.png);
+}
+
+.heading {
+    font-family: "Gilda Display", serif;
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.feature {
+    width: 100%;
+    padding: 30px;
+    background: #1E1E1E url(../images/pattern-1.png) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    margin-top: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.feature h2 {
+    font-family: "Gilda Display", serif;
+    font-size: 24px;
+    margin: 30px 0;
+}
+
+.feature p {
+    font-family: "Barlow", sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* WHAT WE DO SECTION END */
+
+/* HOTELER SECTION */
+.hoteler {
+    padding: 3.75rem 0;
+    width: 100%;
+    background: url(../images/banner-img-2.jpg) no-repeat center center;
+    background-attachment: fixed;
+}
+
+.hoteler .hoteler-text .subheading::before {
+    display: none;
+}
+
+.hoteler .hoteler-text .heading {
+    max-width: 612px;
+}
+
+.swiper {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.swiper-slide img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.slide-container {
+    position: relative;
+}
+
+.slide-overlay {
+    font-family: "Gilda Display", serif;
+    width: 200px;
+    line-height: 70px;
+    background-color: #1e1e1e;
+    position: absolute;
+    text-align: center;
+    bottom: 50px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 100;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.slide-overlay:hover {
+    background: #AA8453;
+    transition: all 0.3s ease-in-out;
+}
+
+.slider-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.button-next,
+.button-prev {
+    width: 50px;
+    line-height: 50px;
+    background: #1E1E1E;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.button-next:hover,
+.button-prev:hover {
+    background: #AA8453;
+    transition: all 0.3s;
+}
+
+.button-next i,
+.button-prev i {
+    color: #AA8453;
+}
+
+.button-next i:hover,
+.button-prev i:hover {
+    color: #fff;
+    transition: all 0.3s;
+}
+
+/* HOTELER SECTION END */
+
+/* PRICING SECTION */
+.pricing {
+    margin: 6.25rem 0;
+}
+
+.price-card {
+    width: 100%;
+    padding: 0 30px;
+    margin-top: 50px;
+    border: 1px solid #AA8453;
+    cursor: pointer;
+}
+
+.price-card:hover {
+    transform: translateY(-20px);
+    transition: all 0.3s ease-in-out;
+}
+
+.room-type h2 {
+    font-family: "Barlow", sans-serif;
+    width: 180px;
+    font-size: 18px;
+    background: #AA8453;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.price-value {
+    font-family: "Gilda Display", serif;
+    font-size: 40px;
+}
+
+.price {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.plan {
+    font-family: "Barlow", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+}
+
+.plan::after {
+    content: "";
+    height: 50px;
+    width: 1px;
+    position: absolute;
+    left: -5px;
+    top: -18px;
+    border: 1px solid #fff;
+    -webkit-transform: rotate(-142.1deg);
+    transform: rotate(-142.1deg);
+    transition: all 0.3s ease;
+}
+
+.price-card ul {
+    list-style: none;
+    font-family: "Barlow", sans-serif;
+    text-transform: capitalize;
+}
+
+.price-card ul li {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.price-card ul li i {
+    color: #AA8453;
+    display: inline-block;
+    background: #fff;
+    width: 24px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 50%;
+}
+
+.price-list-text {
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+.price-card ul li span i {
+    background: none;
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+}
+
+.price-card a {
+    font-family: "Barlow", sans-serif;
+    display: block;
+    width: 178px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    color: #AA8453;
+    border: 1px solid #AA8453;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.price-card a:hover {
+    background: #AA8453;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* PRICING SECTION END */
+
+/* BLOG SECTION */
+.blog .heading {
+    max-width: 590px;
+    margin: 0 auto;
+}
+
+.blog-box {
+    background: rgba(30, 30, 30, 0.3);
+    padding: 15px;
+}
+
+.blog-box h2 {
+    font-family: "Gilda Display", serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 20px 0;
+    margin-left: 50px;
+    position: relative;
+}
+
+.blog-box h2::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 1px;
+    background: #fff;
+    left: -50px;
+    top: 50%;
+}
+
+.blog-box h3 {
+    font-family: "Gilda Display", serif;
+    font-size: 24px;
+    font-weight: 400px;
+}
+
+.blog-box p {
+    font-family: "Barlow", sans-serif;
+    color: #7d7d7d;
+    font-size: 16px;
+    line-height: 28px;
+    margin: 20px 0;
+}
+
+.blog-box a {
+    display: block;
+    font-family: "Gilda Display", serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+.blog-box a i {
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.blog-box a:hover {
+    color: #AA8453;
+    transition: all 0.3s ease-in;
+}
+
+/* BLOG SECTION END */
+
+/* FOOTER SECTION */
+footer {
+    font-family: "Barlow", sans-serif;
+    width: 100%;
+    background: #1E1E1E url(../images/pattern-3.png) no-repeat center center;
+    background-size: cover;
+    margin-top: 6.25rem;
+}
+
+footer .footer-list p {
+    font-size: 18px;
+    margin-top: 70px;
+    margin-bottom: 35px;
+}
+
+footer .footer-list ul {
+    list-style: none;
+    width: 100%;
+}
+
+.footer-list {
+    padding: 80px 0;
+}
+
+footer ul li h3 {
+    font-family: "Gilda Display", serif;
+    font-size: 24px;
+}
+
+footer ul li {
+    line-height: 40px;
+}
+
+footer ul li a {
+    color: #fff;
+    font-size: 1rem;
+}
+
+footer ul li a:hover {
+    color: #AA8453;
+    transition: all 0.3s ease-in;
+}
+
+.footer-list .email {
+    background: #141212;
+    padding: 20px 25px;
+}
+
+.footer-list .email input,
+button {
+    background: none;
+    border: none;
+}
+
+.footer-list .email input {
+    color: #7D7D7D;
+    font-size: 18px;
+    width: 92%;
+    line-height: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.footer-list .email button i {
+    color: #AA8453;
+    font-size: 24px;
+}
+
+footer .footer-buttom p {
+    border-top: 1px solid #7D7D7D;
+    text-align: center;
+    font-size: 18px;
+    line-height: 100px;
+    margin: 0 0;
+}
+
+/* FOOTER SECTION END */
+
+.banner-2 {
+    width: 100%;
+    min-height: 500px;
+    background: url(../images/banner-img-2.jpg);
+    align-content: center;
+}
+
+.banner-2 h2 {
+    font-family: "Gilda Display", serif;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.breadcrumb {
+    justify-content: center;
+    background-color: transparent;
+}
+
+.breadcrumb-item a {
+    color: #AA8453;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: white;
+}
+
+.breadcrumb-item.active {
+    color: white;
+}
+
+/* ABOUT PAGE */
+
+/* ABOUT US SECTION */
+.about-us {
+    margin: 6.25rem 0;
+}
+
+.about-us .about-left {
+    width: 100%;
+}
+
+.about-us .about-left img {
+    width: 100%;
+}
+
+.about-us .about-right {
+    width: 100%;
+}
+
+.about-us .about-right .about-right-text .subheading::before {
+    display: none;
+}
+
+.about-us .about-right .about-right-text p {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.about-us .about-right .about-right-text p span {
+    font-family: "Gilda Display", serif;
+    font-size: 18px;
+    color: #AA8453;
+    margin: 20px 0;
+}
+
+.about-right a {
+    width: 180px;
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    background: #AA8453;
+    line-height: 50px;
+    margin-top: 23px;
+}
+
+.about-right a:hover {
+    background: #1E1E1E;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ABOUT US SECTION END */
+
+/* ABOUT HIGHLIGHTS SECTION */
+.about-highlight-left {
+    width: 100%;
+}
+
+.about-highlight-left img {
+    width: 100%;
+}
+
+.about-highlight-right {
+    width: 100%;
+}
+
+.about-highlight-right img {
+    width: 100%;
+}
+
+.about-highlight-text {
+    width: 100%;
+    padding: 50px 100px;
+    text-align: center;
+}
+
+.about-highlight-text p {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 200;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.about-highlight-text a {
+    width: 180px;
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    background: #AA8453;
+    line-height: 50px;
+    margin-top: 23px;
+}
+
+.about-highlight-text a:hover {
+    background: #1E1E1E;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ABOUT HIGHLIGHTS SECTION END */
+
+/* COUNTER */
+.counter {
+    font-family: "Gilda Display", serif;
+    width: 100%;
+    margin: 6.25rem 0;
+    background: #1E1E1E;
+    padding: 60px 0;
+}
+
+.counter-box {
+    width: 100%;
+    text-align: center;
+}
+
+.counter-box h2 {
+    font-size: 130px;
+    color: #AA8453;
+}
+
+.counter-box p {
+    font-size: 24px;
+}
+
+/* COUNTER END */
+
+/* TEAM MEMBERS */
+.team-members {
+    margin-top: 40px;
+}
+
+.team-member-img {
+    width: 100%;
+    padding: 25px;
+    border: 1px solid #AA8453;
+    overflow: hidden;
+}
+
+.team-member-img img {
+    width: 100%;
+}
+
+.team-member-img img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in;
+}
+
+.team-member-text h2 {
+    font-family: "Gilda Display", serif;
+    font-size: 24px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.team-member-text h2:hover {
+    color: #AA8453;
+    transition: all 0.3s;
+}
+
+.team-member-text p {
+    font-family: "Barlow", serif;
+    font-size: 16px;
+    color: #7d7d7d;
+}
+
+/* TEAM MEMBERS END */
+
+/* LOCATION */
+.location {
+    width: 100%;
+    margin-top: 6.25rem;
+    background: rgba(30, 30, 30, 0.2) url(../images/pattern-2.png) no-repeat;
+    padding: 60px 0;
+}
+
+.location-text .subheading::before {
+    display: none;
+}
+
+.location-text p {
+    font-size: 18px;
+    color: #7d7d7d;
+    margin-top: 100px;
+}
+
+.location-form form {
+    font-family: "Barlow", serif;
+    width: 100%;
+    background: #141212;
+    padding: 30px;
+}
+
+.location-form form h2 {
+    color: #AA8453;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.location-form form h3 {
+    font-family: "Gilda Display", serif;
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.location-form form textarea,
+input {
+    width: 100%;
+    font-size: 16px;
+    color: #fff !important;
+    background: #1E1E1E;
+    border: none;
+    outline: none;
+    line-height: 50px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.location-form form textarea::placeholder,
+input::placeholder {
+    color: #fff;
+    font-weight: 200;
+}
+
+.location-form form button {
+    width: 100%;
+    background: #AA8453;
+    line-height: 50px;
+    font-weight: 500px;
+}
+
+.location-form form button:hover {
+    background: #1E1E1E;
+    transition: all 0.3s ease-in-out;
+}
+
+/* LOCATION END */
+
+/* ABOUT PAGE */
+
+/* SERVICE PAGE */
+.service-boxs {
+    margin-top: 6.25rem;
+}
+
+.service-box {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.service-box img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.service-box img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.service-box-overlay {
+    font-family: "Gilda Display", serif;
+    width: 200px;
+    line-height: 70px;
+    background-color: #AA8453;
+    position: absolute;
+    text-align: center;
+    bottom: 50px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 100;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.service-box-overlay:hover {
+    background: #1e1e1e;
+    transition: all 0.3s ease-in-out;
+}
+
+/* SERVICE PAGE END */
+
+/* ROOMS PAGE */
+.room-boxs {
+    margin-top: 6.25rem;
+}
+
+.room-box {
+    width: 100%;
+    margin-top: 24px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.room-box img {
+    width: 100%;
+}
+
+.room-box-overlay {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    text-align: right;
+    transition: all 0.3s ease;
+    z-index: 9;
+}
+
+.room-box:hover .room-box-overlay {
+    bottom: 85px;
+}
+
+.room-box-overlay h2 {
+    font-family: "Gilda Display", serif;
+    font-size: 27px;
+}
+
+.room-box-overlay p {
+    font-family: "Barlow", serif;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.room-box-caption {
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    left: 30px;
+    width: calc(100% - 60px);
+    padding-top: 10px;
+    border-top: 1px solid rgb(255, 255, 255);
+    opacity: 0;
+    visibility: hidden;
+    bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.room-box-caption a {
+    display: block;
+    width: 150px;
+    color: #fff;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+    border: 1px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.room-box-caption a:hover {
+    background: #AA8453;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.room-box:hover .room-box-caption {
+    bottom: 30px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+
+.room-box:hover .room-box img {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.room-box:hover img {
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* ROOMS PAGE END */
+
+/* CONTACT PAGE */
+.contact-details {
+    margin-top: 6.25rem;
+}
+
+.contact-details-text {
+    width: 100%;
+}
+
+.contact-details .contact-details-text h2 {
+    font-family: "Barlow", serif;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.contact-details .contact-details-text h3 {
+    font-family: "Gilda Display", serif;
+    max-width: 80%;
+    font-size: 50px;
+}
+
+.contact-details .contact-details-text p {
+    font-family: "Barlow", serif;
+    max-width: 82%;
+    font-size: 18px;
+    color: #7d7d7d;
+}
+
+.contact-details .contact-details-text .details {
+    font-family: "Barlow", serif;
+    font-size: 18px;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.contact-details .contact-details-text .details:hover {
+    color: #AA8453;
+}
+
+.contact-details .contact-details-text .details i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #AA8453;
+}
+
+.contact-details form {
+    width: 100%;
+    padding: 30px;
+    background: #1E1E1E;
+}
+
+.contact-details .inputs input,
+textarea {
+    width: 100%;
+    color: #fff !important;
+    line-height: 50px;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff;
+
+}
+
+.contact-details .inputs input::placeholder,
+textarea::placeholder {
+    color: #fff;
+    font-weight: 200;
+}
+
+.contact-details form button {
+    width: 100%;
+    background: #AA8453;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: 400;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* CONTACT PAGE END */
+.blog-details {
+    margin-top: 6.25rem;
+}
+
+.blog-details img {
+    width: 100%;
+}
+
+/* BLOG DETAILS PAGE */
+.blog-details-left h3 {
+    font-family: "Gilda Display", serif;
+    font-size: 18px;
+    margin: 20px 0;
+    color: #AA8453;
+}
+
+.blog-details-left h3 span {
+    font-family: "Barlow", serif;
+    font-size: 16px;
+    margin: 0 20px;
+    color: #7d7d7d;
+}
+
+.blog-details p {
+    font-family: "Barlow", serif;
+    font-size: 16px;
+    color: #7d7d7d;
+    line-height: 28px;
+}
+
+.blog-details-left h2 {
+    font-family: "Gilda Display", serif;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.comment-section h2 {
+    margin: 6.25rem 0;
+}
+
+.comment-section img {
+    width: 70px;
+}
+
+.comment-box {
+    margin-bottom: 25px;
+}
+
+.comment-text {
+    margin-left: 20px;
+    border-bottom: 1px solid #7D7D7D;
+}
+
+.comment-text h2 {
+    font-family: "Gilda Display", serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+.comment-text h3 {
+    font-family: "Barlow", serif;
+    font-size: 12px;
+    color: #AA8453;
+    margin-top: 10px;
+}
+
+.comment-text a {
+    display: block;
+    width: 70px;
+    line-height: 30px;
+    text-align: center;
+    background: #AA8453;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.comments-form h2 {
+    margin: 20px 0;
+}
+
+.comments-form input {
+    background: none;
+    padding: 0 10px;
+    border: 1px solid #7d7d7d;
+    margin-bottom: 40px;
+}
+
+.comments-form textarea {
+    background: none;
+    padding: 0 10px;
+    border: 1px solid #7d7d7d;
+    margin-bottom: 40px;
+}
+
+.comments-form button {
+    width: 150px;
+    line-height: 50px;
+    text-align: center;
+    background: #AA8453;
+}
+
+.blog-details-right h2 {
+    font-family: "Gilda Display", serif;
+    font-size: 24px;
+}
+
+.recent-post {
+    font-family: "Barlow", serif;
+    border-bottom: 1px solid #7d7d7d;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.recent-img {
+    width: 80px;
+    margin-right: 20px;
+}
+
+.recent-text p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.recent-text span {
+    color: #AA8453;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.tags a {
+    font-family: "Barlow", serif;
+    background: #AA8453;
+    color: #fff;
+    line-height: 30px;
+    padding: 0 10px;
+}
+
+/* BLOG DETAILS PAGE END */
+
+
+/* TABLET */
+@media(max-width:1024px) {
+
+    #cursor,
+    #cursor-border {
+        display: none;
+    }
+
+    .navbar-fix {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        background-color: #141212;
+    }
+
+    .feature {
+        padding: 20px 15px;
+        margin-top: 15px;
+    }
+
+    .feature h2 {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    .feature p {
+        font-size: 16px;
+    }
+
+    .blog-box {
+        margin-bottom: 30px;
+    }
+
+    .price-card {
+        padding: 0 20px;
+    }
+
+    .footer-list .email {
+        padding: 20px 15px;
+    }
+
+    .footer-list .email input {
+        width: 85%;
+    }
+
+    .about-left {
+        margin-bottom: 50px;
+    }
+
+    .about-highlight-text {
+        padding: 10px;
+    }
+}
+
+/* LANDSCAP */
+@media(max-width: 768px) {
+
+    #cursor,
+    #cursor-border {
+        display: none;
+    }
+
+    .footer-list {
+        padding: 50px 0;
+    }
+
+    .footer-list .email {
+        margin-bottom: 30px;
+    }
+
+    footer .footer-list ul {
+        margin-bottom: 30px;
+    }
+
+    .navbar-fix {
+        display: block;
+    }
+
+    .about-highlight-text {
+        padding: 30px 10px;
+    }
+
+    .location-text p {
+        margin-top: 20px;
+    }
+
+    .comments-form {
+        margin-bottom: 50px;
+    }
+}
+
+/* MOBILE SCREEN */
+@media(max-width: 500px) {
+    .banner h1 {
+        font-size: 50px;
+    }
+
+    .banner-2 h2 {
+        font-size: 50px;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .swiper-slide {
+        padding: 0 15px;
+    }
+
+    .blog-box {
+        margin-bottom: 30px;
+    }
+
+    .price-card {
+        margin-top: 24px;
+    }
+
+    footer .footer-list ul {
+        margin-bottom: 30px;
+    }
+
+    footer .footer-buttom p {
+        font-size: 14px;
+    }
+}
