@@ -89,7 +89,7 @@ Run `index.html` using your browser or the **Live Server** extension in Visual S
 **Sayan**  
 **UI/UX Designer & Front-End Web Developer**
 
-💼 LinkedIn: https://linkedin.com/in/YOUR_LINKEDIN_USERNAME
+💼 LinkedIn: https://linkedin.com/in/sayan006
 
 🐙 GitHub: https://github.com/OfficalSayan06
 
